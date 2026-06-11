@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Safira - Mostra Técnica</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <nav class="nav-header">
+        <div class="conteudo-banner">
+            <span class="subtitulo">Equipe</span>
+            <h1 class="titulo">Safira</h1>
+        </div>
+    </nav>
+    <main id="main-site">
+
+        <section id="sobre" class="secao-sobre">
+            <h2>Quem somos?</h2>
+            <p>Somos estudantes do segundo ano do Ensino Médio do Colégio Estadual Lindaura Ribeiro Lucas, do curso técnico em Desenvolvimento de Sistemas. Somos focados em projetos simples e inovadores para a Mostra de Cursos Técnicos. A Equipe Safira nasceu da paixão por criar coisas do zero.  </p>
+        </section>
+
+        <section id="membros" class="secao-membros">
+            <div class="lista-membros">
+                <button class="btn-membro" onclick="abrirPerfil('Sophia Cabral Soares', 'Tech Lead e Scrum Master', 'Sophia gerencia a equipe, organiza tudo e trabalha mais ou menos como uma desenvolvedora Full Stack e faz tudo.')">
+                    <p>Sophia luta Taekwondo, gosta de Fórmula 1 e automobilismo no geral, além de desenhar e ser multitask, e possivelmente consertar microondas nas horas vagas</p>
+                </button>
+                <button class="btn-membro" onclick="abrirPerfil('Victor Silveira de Oliveira', 'Desenvolvedor Backend', 'Victor gerencia lógica de negócios, segurança e comunicação com DBs. É o braço direito de Sophia.')">
+                    <p>Victor gosta de comida, MUITA comida e dormir</p>
+                </button>
+                <button class="btn-membro" onclick="abrirPerfil('Isabelle Schimiloski Sutil', 'Desenvolvedora Frontend', 'Ajuda a fazer toda a parte visual, bonitinha e baitola dos sites e projetos.')">
+                    <p>Isabelle gosta de Roblox em um nível extremo, ao ponto de passar o dia todo jogando.</p>
+                </button>
+                <button class="btn-membro" onclick="abrirPerfil('Kauane Alves Camargo', 'Banco de Dados', 'Faz a parte de tabelas em SQL, organiza dados e ajuda no design')">
+                    <p>Kauane ajuda no design de vez em quando, porque gosta muito de desenhar</p>
+                </button>
+                <button class="btn-membro" onclick="abrirPerfil('Gustavo Henrique Morer Maciel', 'Infra', 'É o real faz tudo, responsável por gerenciar a base tecnológica e buscar os notebooks nas aulas')">
+                    <p>Gosta de jogar futebol e é o maior usuário de IA conhecido</p>
+                </button>
+                <button class="btn-membro" onclick="abrirPerfil('Melissa Soler da Silva', 'Documentação', 'Registra, anota e documenta tudo o que fazemos.')">
+                    <p>Gosta de assistir Reels no Instagram e faz isso a cada cinco minutos.</p>
+                </button>
+            </div>
+        </section>
+
+        <section id="colegio" class="secao-escola">
+            <h2>O Colégio</h2>
+            <p>Nosso colégio é referência na educação em São José dos Pinhais, desde o fundamental até o ensino médio. O Lindaura possui aulas de manhã, tarde e noite. Os cursos técnicos são Administração e Desenvolvimento de Sistemas.</p>
+        </section>
+    </main>
+
+    <section id="perfil-membro" class="secao-perfil hidden">
+        <button class="btn-back" onclick="fecharPerfil">← Voltar</button>
+
+        <div class="cabecalho-perfil">
+            <div class="perfil-avatar"></div>
+            <div class="info-perfil">
+                <h1 id="perfil-nome">nome</h1>
+                <h3 id="perfil-cargo">cargo</h3>
+            </div>
+        </div>
+
+        <div class="corpo-perfil">
+            <h2>Sobre mim</h2>
+            <p id="perfil-descricao">descrição</p>
+            
+            <div class="scroll-filler">
+                <p>role para baixo para ver a mudança de tonalidade</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2026 - Equipe Safira || Mostra de Cursos Técnicos</p>
+    </footer>
+</body>
+</html>
