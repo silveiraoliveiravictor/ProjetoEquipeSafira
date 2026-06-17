@@ -1,3 +1,12 @@
+/**
+ * PROJECT: Equipe Safira - Mostra de Cursos
+ * ROLE: Tech Lead Architecture
+ * MODULE: main.js (Global Controller)
+ */
+
+// =========================================================================
+// 1. DATA REPOSITORY (Banco de Dados Local)
+// =========================================================================
 const dadosMembros = {
     sophia: {
         nome: "Sophia Cabral Soares",
@@ -49,13 +58,18 @@ const dadosMembros = {
     }
 };
 
+// =========================================================================
+// 2. MEMBERS PROFILE MODULE (Lógica da Grade de Integrantes)
+// =========================================================================
+
+// Elementos de navegação e containers
 const sitePrincipal = document.getElementById('site-principal');
 const paginaPerfil = document.getElementById('pagina-perfil');
-
 const cardsMembros = document.querySelectorAll('.card-membro');
 const btnVoltar = document.getElementById('btn-voltar');
 const btnVoltarFim = document.getElementById('btn-voltar-fim');
 
+// Elementos de injeção de dados do perfil
 const perfFoto = document.getElementById('perf-foto');
 const perfNome = document.getElementById('perf-nome');
 const perfCargo = document.getElementById('perf-cargo');
@@ -64,12 +78,15 @@ const perfSobre = document.getElementById('perf-sobre');
 const perfHabilidades = document.getElementById('perf-habilidades');
 const breadNome = document.getElementById('bread-nome');
 
-//Função para abrir a tela de perfil e carregar os dados
-function exibirPerfil(idMembro){
+/**
+ * Renderiza os dados do membro selecionado e alterna a view
+ * @param {string} idMembro - Chave identificadora do objeto dadosMembros
+ */
+function exibirPerfil(idMembro) {
     const info = dadosMembros[idMembro];
 
-    if(info){
-        //Preenche os campos textuais com o banco de dados
+    if (info) {
+        // Hydration: Preenche os nós textuais do DOM
         perfNome.textContent = info.nome;
         breadNome.textContent = info.nome;
         perfCargo.textContent = info.cargo;
@@ -78,9 +95,10 @@ function exibirPerfil(idMembro){
         perfFoto.src = info.foto;
         perfFoto.alt = `Foto de ${info.nome}`;
 
+        // Limpa a árvore antiga de habilidades antes de renderizar as novas
         perfHabilidades.innerHTML = '';
 
-        //cria as tags de habilidades
+        // Criação dinâmica dos elementos de skill
         info.habilidades.forEach(skill => {
             const tag = document.createElement('span');
             tag.classList.add('tag-skill');
@@ -88,35 +106,77 @@ function exibirPerfil(idMembro){
             perfHabilidades.appendChild(tag);
         });
 
-        //Alterna a exibição das telas
+        // Controle de Estado da UI (View Swapping)
         sitePrincipal.classList.add('hidden');
         paginaPerfil.classList.remove('hidden');
         
-        //rola automaticamente a página para o topo
         window.scrollTo(0, 0);
     }
 }
 
-// Função p voltar à tela principal
-function voltarParaHome(){
+/**
+ * Retorna o fluxo de navegação do usuário para a landing page principal
+ */
+function voltarParaHome() {
     paginaPerfil.classList.add('hidden');
     sitePrincipal.classList.remove('hidden');
 
-    //volta para a seção de membros
     const secaoMembros = document.getElementById('membros');
     if (secaoMembros) {
         secaoMembros.scrollIntoView();
     }
 }
 
-//Atribui os eventos de clique em todos os cards da grade
+// Inicialização dos Event Listeners do Módulo de Membros
 cardsMembros.forEach(card => {
-    card.addEventListener('click', () =>{
+    card.addEventListener('click', () => {
         const idMembro = card.getAttribute('data-id');
         exibirPerfil(idMembro);
     });
 });
 
-// Atribui os eventos para os botões de voltar
 btnVoltar.addEventListener('click', voltarParaHome);
 btnVoltarFim.addEventListener('click', voltarParaHome);
+
+
+// =========================================================================
+// 3. INSTITUTIONAL CAROUSEL MODULE (Lógica do Slider "Nosso Colégio")
+// =========================================================================
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.getElementById('prev-slide');
+const nextBtn = document.getElementById('next-slide');
+
+let currentSlide = 0;
+
+/**
+ * Atualiza o estado visual do carrossel alternando os slides e os dots
+ * @param {number} index - Próximo índice de slide a ser exibido
+ */
+function showSlide(index) {
+    // Tratamento de estouro de limites (Loop Infinito do Slider)
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+
+    // Reset de classes utilitárias
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Ativação do estado do slide atual
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+// Eventos de clique nas setas direcionais
+nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+
+// Eventos de clique para navegação direta via paginação (Dots)
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+});
