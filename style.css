@@ -283,26 +283,51 @@ body{
     display: block; 
 }
 
-/* 3. DESIGN ORIGINAL DO CARD */
+/* 3. DESIGN ORIGINAL DO CARD (ORGANIZADO) */
 .colegio-wrapper {
     background-color: var(--blue-medium);
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .colegio-banner {
     position: relative;
-    height: 350px;
+    height: 350px; /* Garante tamanho idêntico para todos os banners */
     width: 100%;
+    overflow: hidden;
 }
 
-.colegio-banner img {
+/* Aplica o filtro escuro APENAS na foto da fachada do colégio */
+.colegio-banner img.img-instituicao {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(0.4) saturate(0.8);
+}
+
+/* Tratamento especial da LOGO: sem filtros, centralizada e sem cortes agressivos */
+.colegio-banner img.img-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Impede o corte da imagem circular */
+    filter: none; /* Totalmente limpa e nítida */
+    padding: 20px; /* Respiro para não colar nas bordas do card */
+}
+
+/* Fundo customizado opcional para destacar a logo redonda no banner */
+.banner-logo-bg {
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+/* Garante que o iframe do Google Maps preencha o banner perfeitamente */
+.colegio-banner iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .banner-overlay-text {
@@ -324,6 +349,7 @@ body{
     padding: 40px;
     gap: 40px;
     color: var(--white);
+    flex-grow: 1; /* Faz as caixas de texto preencherem alturas proporcionais */
 }
 
 .colegio-content-grid h4 {
