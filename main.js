@@ -11,11 +11,7 @@ const dadosMembros = {
     sophia: {
         nome: "Sophia Cabral Soares",
         cargo: "Tech Lead & Scrum Master",
-<<<<<<< HEAD
-        frase: "Ad astra per aspera.",
-=======
         frase: "O medo me fascina. - Ayrton Senna",
->>>>>>> d7f3a630405a6ff60779427d05756b193e069735
         sobre: "Líder técnica focada em guiar o desenvolvimento de projetos da Equipe Safira. Como Scrum Master, garante que a equipe mantenha sua performance.",
         foto: "img/gabriel_pasiagi-_2915_.jpg",
         habilidades: ["Liderança", "Idiomas", "Git", "Frontend", "Raciocínio Lógico", "Lutar Taekwondo"]
@@ -47,11 +43,7 @@ const dadosMembros = {
     gustavo: {
         nome: "Gustavo Henrique Morer Maciel",
         cargo: "Infraestrutura",
-<<<<<<< HEAD
         frase: "Quanto mais difícil a vitória, maior a felicidade de ganhar. -Pelé",
-=======
-        frase: "A melhor infraestrutura é aquela que funciona de forma silenciosa e ininterrupta.",
->>>>>>> d7f3a630405a6ff60779427d05756b193e069735
         sobre: "Gustavo garante a estabilidade do ecossistema de desenvolvimento. Cuida da automação dos notebooks do colégio, ao mesmo tempo que faz um pouco de tudo.",
         foto: "img/gustavo.jpg",
         habilidades: ["Comunicação", "Proatividade", "Manutenção", "Organização", "Jogar bola"]
@@ -59,11 +51,7 @@ const dadosMembros = {
     melissa: {
         nome: "Melissa Soler da Silva",
         cargo: "Documentação",
-<<<<<<< HEAD
         frase: "Os sonhos são a estrada real para o inconsciente. -Freud",
-=======
-        frase: "Código excelente sem registro vira legado incompreendido.",
->>>>>>> d7f3a630405a6ff60779427d05756b193e069735
         sobre: "Responsável pela engenharia de requisitos e documentação técnica do sistema. Organiza os relatórios acadêmicos exigidos pela Mostra de Cursos Técnicos.",
         foto: "img/melissa.jpg",
         habilidades: ["Organização", "Design", "Redação Técnica", "Planejamento", "Assistir Reels"]
