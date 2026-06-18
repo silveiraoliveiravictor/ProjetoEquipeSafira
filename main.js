@@ -46,7 +46,7 @@ const dadosMembros = {
         frase: "Quanto mais difícil a vitória, maior a felicidade de ganhar. -Pelé",
         sobre: "Gustavo garante a estabilidade do ecossistema de desenvolvimento. Cuida da automação dos notebooks do colégio, ao mesmo tempo que faz um pouco de tudo.",
         foto: "img/gustavo.jpg",
-        habilidades: ["Comunicação", "Proatividade", "Manutenção", "Organização", "Jogar bola"]
+        habilidades: ["Comunicação", "Proatividade", "Persistência", "Organização", "Jogar bola"]
     },
     melissa: {
         nome: "Melissa Soler da Silva",
