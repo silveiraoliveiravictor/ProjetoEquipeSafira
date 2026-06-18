@@ -361,10 +361,7 @@ body{
 
 .colegio-about p {
     line-height: 1.6;
-<<<<<<< HEAD
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-=======
->>>>>>> d7f3a630405a6ff60779427d05756b193e069735
     color: var(--text-muted);
 }
 
@@ -376,10 +373,7 @@ body{
     position: relative;
     padding-left: 20px;
     margin-bottom: 10px;
-<<<<<<< HEAD
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-=======
->>>>>>> d7f3a630405a6ff60779427d05756b193e069735
     color: var(--text-muted);
 }
 

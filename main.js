@@ -11,7 +11,7 @@ const dadosMembros = {
     sophia: {
         nome: "Sophia Cabral Soares",
         cargo: "Tech Lead & Scrum Master",
-        frase: "O medo me fascina. - Ayrton Senna",
+        frase: "O medo me fascina. -Ayrton Senna",
         sobre: "Líder técnica focada em guiar o desenvolvimento de projetos da Equipe Safira. Como Scrum Master, garante que a equipe mantenha sua performance.",
         foto: "img/gabriel_pasiagi-_2915_.jpg",
         habilidades: ["Liderança", "Idiomas", "Git", "Frontend", "Raciocínio Lógico", "Lutar Taekwondo"]
@@ -27,7 +27,7 @@ const dadosMembros = {
     isabelle: {
         nome: "Isabelle Schimiloski Sutil",
         cargo: "Desenvolvedora Frontend",
-        frase: "Transformar linhas de código em coisas bonitas e fáceis de usar.",
+        frase: "Às vezes, o silêncio diz mais do que qualquer palavra. S",
         sobre: "Como dev frontend, dá vida ao projeto e o retira do papel",
         foto: "img/isabelle.jpg",
         habilidades: ["Responsividade", "HTML5", "Design", "Figma", "Jogar Roblox"]
