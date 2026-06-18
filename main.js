@@ -30,7 +30,7 @@ const dadosMembros = {
         frase: "Às vezes, o silêncio diz mais do que qualquer palavra. S",
         sobre: "Como dev frontend, dá vida ao projeto e o retira do papel",
         foto: "img/isabelle.jpg",
-        habilidades: ["Responsividade", "HTML5", "Design", "Figma", "Jogar Roblox"]
+        habilidades: ["Design", "Organização", "Determinação", "HTML5"]
     },
     kauane: {
         nome: "Kauane Alves Camargo",
@@ -54,7 +54,7 @@ const dadosMembros = {
         frase: "Os sonhos são a estrada real para o inconsciente. -Freud",
         sobre: "Responsável pela engenharia de requisitos e documentação técnica do sistema. Organiza os relatórios acadêmicos exigidos pela Mostra de Cursos Técnicos.",
         foto: "img/melissa.jpg",
-        habilidades: ["Organização", "Design", "Redação Técnica", "Planejamento", "Assistir Reels"]
+        habilidades: ["Organização", "Design", "Redação Técnica", "Planejamento", "Jogar vôlei", "Dança"]
     }
 };
 
