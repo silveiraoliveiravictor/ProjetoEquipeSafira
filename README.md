@@ -21,9 +21,11 @@ Esse evento é importante para a comunidade reconhecer a importância de se ter 
 Antes de começar, você precisa ter o VSCode e o Git baixados em sua máquina.
 
 ##🤖 Rodando a aplicação localmente
-#Clone este repositório
+
+Clone este repositório
 
 1. git clone [URLdoRepositório]
 
 2. Baixe a extensão Live Server
-Depois disso, é só rodar no navegador.
+3. Depois disso, é só rodar no navegador.
+
