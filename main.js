@@ -1,12 +1,5 @@
-/**
- * PROJECT: Equipe Safira - Mostra de Cursos
- * ROLE: Tech Lead Architecture
- * MODULE: main.js (Global Controller)
- */
-
-// =========================================================================
 // 1. DATA REPOSITORY (Banco de Dados Local)
-// =========================================================================
+
 const dadosMembros = {
     sophia: {
         nome: "Sophia Cabral Soares",
@@ -21,13 +14,13 @@ const dadosMembros = {
         cargo: "Desenvolvedor Backend",
         frase: "Juntar-se é um começo; manter-se unido é progresso; trabalhar junto é sucesso. - Henry Ford",
         sobre: "Responsável pelo coração lógico do projeto e por tudo que acontece 'por baixo dos panos' de um site. Liga a parte de Frontend com Banco de Dados e todo o resto.",
-        foto: "img/defaultuser.jpg",
+        foto: "img/victor.jpg",
         habilidades: ["Comunicação", "Intuição", "Git", "Parceria", "Brawl Stars"]
     },
     isabelle: {
         nome: "Isabelle Schimiloski Sutil",
         cargo: "Desenvolvedora Frontend",
-        frase: "Às vezes, o silêncio diz mais do que qualquer palavra. S",
+        frase: "Às vezes, o silêncio diz mais do que qualquer palavra.",
         sobre: "Como dev frontend, dá vida ao projeto e o retira do papel",
         foto: "img/isabelle.jpg",
         habilidades: ["Design", "Organização", "Determinação", "HTML5"]
@@ -37,7 +30,7 @@ const dadosMembros = {
         cargo: "Banco de Dados",
         frase: "O segredo do sucesso são os pequenos dados coletados.",
         sobre: "Responsável pelo desenho lógico e físico dos dados do sistema. Garante que as informações geradas fiquem armazenadas com segurança.",
-        foto: "img/defaultuserzwei.jpg",
+        foto: "img/kauane.jpg",
         habilidades: ["Design", "Pensamento Intuitivo", "Modelagem SQL", "Desenho", "Segurança de informação"]
     },
     gustavo: {
@@ -58,9 +51,8 @@ const dadosMembros = {
     }
 };
 
-// =========================================================================
-// 2. MEMBERS PROFILE MODULE (Lógica da Grade de Integrantes)
-// =========================================================================
+
+// 2. LÓGICA DA GRADE DE INTEGRANTES
 
 // Elementos de navegação e containers
 const sitePrincipal = document.getElementById('site-principal');
@@ -138,10 +130,7 @@ cardsMembros.forEach(card => {
 btnVoltar.addEventListener('click', voltarParaHome);
 btnVoltarFim.addEventListener('click', voltarParaHome);
 
-
-// =========================================================================
-// 3. INSTITUTIONAL CAROUSEL MODULE (Lógica do Slider "Nosso Colégio")
-// =========================================================================
+// 3. LÓGICA DO SLIDER
 const slides = document.querySelectorAll('.carousel-slide');
 const dots = document.querySelectorAll('.dot');
 const prevBtn = document.getElementById('prev-slide');
