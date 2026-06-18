@@ -18,11 +18,12 @@ Esse evento é importante para a comunidade reconhecer a importância de se ter 
 ---
 
 ## 💾 Como executar o projeto
-### Antes de começar, você precisa ter o VSCode e o Git baixados em sua máquina.
+Antes de começar, você precisa ter o VSCode e o Git baixados em sua máquina.
 
-### 🤖 Rodando a aplicação localmente
-# Clone este repositório
-$ git clone [URLdoRepositório]
+##🤖 Rodando a aplicação localmente
+#Clone este repositório
 
-#Baixe a extensão Live Server
-$ Depois disso, é só rodar no navegador.
+1. git clone [URLdoRepositório]
+
+2. Baixe a extensão Live Server
+Depois disso, é só rodar no navegador.
