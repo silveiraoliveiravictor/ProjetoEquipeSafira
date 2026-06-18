@@ -3,76 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipe Safira - Mostra Técnica</title>
+    <title>Equipe Safira - Mostra de Cursos</title>
+
+    <link rel="icon" type="image/png" href="img/iconsafira2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
 </head>
 <body>
-    <nav class="nav-header">
-        <div class="conteudo-banner">
-            <span class="subtitulo">Equipe</span>
-            <h1 class="titulo">Safira</h1>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">Equipe Safira</a>
+            <div class="nav-links">
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="#membros">Membros</a>
+                <a href="#colegio">Nosso Colégio</a>
+            </div>
         </div>
     </nav>
-    <main id="main-site">
 
-        <section id="sobre" class="secao-sobre">
-            <h2>Quem somos?</h2>
-            <p>Somos estudantes do segundo ano do Ensino Médio do Colégio Estadual Lindaura Ribeiro Lucas, do curso técnico em Desenvolvimento de Sistemas. Somos focados em projetos simples e inovadores para a Mostra de Cursos Técnicos. A Equipe Safira nasceu da paixão por criar coisas do zero.  </p>
-        </section>
+    <main id="site-principal">
+        <header class="hero-section">
+            <h1>Equipe <span>Safira</span></h1>
+            <p>Um grupo de estudantes apaixonados pelo conhecimento, unidos para crescer e transformar.</p>
+            <a href="#membros" class="btn-primary">Conheça a equipe</a>
+        </header>
 
-        <section id="membros" class="secao-membros">
-            <div class="lista-membros">
-                <button class="btn-membro" onclick="abrirPerfil('Sophia Cabral Soares', 'Tech Lead e Scrum Master', 'Sophia gerencia a equipe, organiza tudo e trabalha mais ou menos como uma desenvolvedora Full Stack e faz tudo.')">
-                    <p>Sophia luta Taekwondo, gosta de Fórmula 1 e automobilismo no geral, além de desenhar e ser multitask, e possivelmente consertar microondas nas horas vagas</p>
-                </button>
-                <button class="btn-membro" onclick="abrirPerfil('Victor Silveira de Oliveira', 'Desenvolvedor Backend', 'Victor gerencia lógica de negócios, segurança e comunicação com DBs. É o braço direito de Sophia.')">
-                    <p>Victor gosta de comida, MUITA comida e dormir</p>
-                </button>
-                <button class="btn-membro" onclick="abrirPerfil('Isabelle Schimiloski Sutil', 'Desenvolvedora Frontend', 'Ajuda a fazer toda a parte visual, bonitinha e baitola dos sites e projetos.')">
-                    <p>Isabelle gosta de Roblox em um nível extremo, ao ponto de passar o dia todo jogando.</p>
-                </button>
-                <button class="btn-membro" onclick="abrirPerfil('Kauane Alves Camargo', 'Banco de Dados', 'Faz a parte de tabelas em SQL, organiza dados e ajuda no design')">
-                    <p>Kauane ajuda no design de vez em quando, porque gosta muito de desenhar</p>
-                </button>
-                <button class="btn-membro" onclick="abrirPerfil('Gustavo Henrique Morer Maciel', 'Infra', 'É o real faz tudo, responsável por gerenciar a base tecnológica e buscar os notebooks nas aulas')">
-                    <p>Gosta de jogar futebol e é o maior usuário de IA conhecido</p>
-                </button>
-                <button class="btn-membro" onclick="abrirPerfil('Melissa Soler da Silva', 'Documentação', 'Registra, anota e documenta tudo o que fazemos.')">
-                    <p>Gosta de assistir Reels no Instagram e faz isso a cada cinco minutos.</p>
-                </button>
+        <section id="quem-somos" class="section-container">
+            <h2 class="section-title">Quem Somos</h2>
+            <div class="cards-institucionais">
+                <div class="card-inst">
+                    <div class="card-icon">💎</div>
+                    <h3>Nossa Missão</h3>
+                    <p>Desenvolvemos projetos colaborativos que unem criatividade, ciência e tecnologia para criar soluções inovadoras.</p>
+                </div>
+                <div class="card-inst">
+                    <div class="card-icon">🪼</div>
+                    <h3>Nossos Valores</h3>
+                    <p>Acreditamos na força da diversidade, no respeito mútuo e na busca constante pelo conhecimento como pilares da nossa equipe.</p>
+                </div>
+                <div class="card-inst">
+                    <div class="card-icon">⚡</div>
+                    <h3>Nossa Visão</h3>
+                    <p>Ser referência de trabalho em equipe no colégio, inspirando outros estudantes a colaborar e inovar juntos.</p>
+                </div>
             </div>
         </section>
 
-        <section id="colegio" class="secao-escola">
-            <h2>O Colégio</h2>
-            <p>Nosso colégio é referência na educação em São José dos Pinhais, desde o fundamental até o ensino médio. O Lindaura possui aulas de manhã, tarde e noite. Os cursos técnicos são Administração e Desenvolvimento de Sistemas.</p>
-        </section>
+        <section id="membros" class="section-container bg-light-section">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <p class="section-subtitle">Clique em um membro para conhecê-lo melhor</p>
+            
+            <div class="grid-membros">
+                <div class="card-membro" data-id="sophia">
+                    <div class="avatar-wrapper">
+                        <img src="img/sophiacrianca.jpg" alt="Sophia Cabral Soares">
+                    </div>
+                    <div class="member-name-tag">Sophia Cabral Soares</div>
+                    <p class="member-role">Tech Lead & Scrum Master</p>
+                    <span class="view-profile-text">Ver perfil →</span>
+                </div>
+
+                <div class="card-membro" data-id="victor">
+                    <div class="avatar-wrapper">
+                        <img src="img/defaultuser.jpg" alt="Victor Silveira de Oliveira">
+                    </div>
+                    <div class="member-name-tag">Victor Silveira de Oliveira</div>
+                    <p class="member-role">Desenvolvedor Backend</p>
+                    <span class="view-profile-text">Ver perfil →</span>
+                </div>
+
+                <div class="card-membro" data-id="isabelle">
+                    <div class="avatar-wrapper">
+                        <img src="img/isacrianca.jpg" alt="Isabelle Sutil">
+                    </div>
+                    <div class="member-name-tag">Isabelle Sutil</div>
+                    <p class="member-role">Desenvolvedora Frontend</p>
+                    <span class="view-profile-text">Ver perfil →</span>
+                </div>
+
+                <div class="card-membro" data-id="kauane">
+                    <div class="avatar-wrapper">
+                        <img src="img/kauanecrianca.jpg" alt="Kauane Alves Camargo">
+                    </div>
+                    <div class="member-name-tag">Kauane Alves Camargo</div>
+                    <p class="member-role">Banco de Dados</p>
+                    <span class="view-profile-text">Ver perfil →</span>
+                </div>
+
+                <div class="card-membro" data-id="gustavo">
+                    <div class="avatar-wrapper">
+                        <img src="img/gustavocrianca.jpg" alt="Gustavo Henrique Morer Maciel">
+                    </div>
+                    <div class="member-name-tag">Gustavo Henrique Morer Maciel</div>
+                    <p class="member-role">Infraestrutura</p>
+                    <span class="view-profile-text">Ver perfil →</span>
+                </div>
+
+                <div class="card-membro" data-id="melissa">
+                    <div class="avatar-wrapper">
+                        <img src="img/melissacrianca.jpg" alt="Melissa Soler da Silva">
+                    </div>
+                    <div class="member-name-tag">Melissa Soler da Silva</div>
+                    <p class="member-role">Documentação</p>
+                    <span class="view-profile-text">Ver perfil →</span>
+                </div>
+            </div>
+        
+    <section id="colegio">
+        <h2 class="section-title">Nosso Colégio</h2>
+    
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn" id="prev-slide">❮</button>
+
+            <div class="carousel-wrapper">
+            
+                <div class="carousel-slide active">
+                    <div class="colegio-wrapper">
+                        <div class="colegio-banner">
+                            <img src="img/colegiolindaura.jpg" alt="Nossa Escola" class="img-instituicao">
+                            <div class="banner-overlay-text">Nossa Escola</div>
+                        </div>
+                        <div class="colegio-content-grid">
+                            <div class="colegio-about">
+                                <h4>Sobre a Instituição</h4>
+                                <p>Fundada em 1991, o Colégio Lindaura é considerado por muitos uma referência em educação em São José dos Pinhais há gerações. É localizado no bairro Parque da Fonte e possui aulas nos turnos da manhã, tarde e noite.</p>
+                            </div>
+                            <div class="colegio-highlights">
+                                <h4>Destaques</h4>
+                                <ul>
+                                    <li>Laboratórios de ciências e informática</li>
+                                    <li>Biblioteca com acervo amplo</li>
+                                    <li>Sala de Altas Habilidades e de Recursos</li>
+                                    <li>Ensino Médio Técnico e Profissionalizante</li>
+                                </ul>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="carousel-slide">
+                    <div class="colegio-wrapper">
+                        <div class="colegio-banner">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1563.0842295222367!2d-49.17089359571193!3d-25.500895623145155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcf0fa63f5dcdf%3A0xabffc9b368410955!2sLindaura%20R%20Lucas%2C%20C%20E%20Prof-Ef%20M!5e1!3m2!1spt-BR!2sbr!4v1781779070635!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="colegio-content-grid">
+                            <div class="colegio-about">
+                                <h4>Nossa Localização</h4>
+                                <p>O colégio está situado no bairro Parque da Fonte, em São José dos Pinhais. Uma localização estratégica e de fácil acesso para integrar toda a comunidade escolar, seja para as aulas teóricas ou atividades esportivas e culturais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="carousel-slide">
+                    <div class="colegio-wrapper">
+                        <div class="colegio-banner banner-logo-bg">
+                            <img src="img/colegiologo.jpg" alt="Logo do Colégio" class="img-logo">
+                        </div>
+                        <div class="colegio-content-grid">
+                            <div class="colegio-about">
+                                <h4>Nossa Identidade Visual</h4>
+                                <p>A logo do nosso colégio representa a união, o conhecimento e o futuro de cada aluno que passa por aqui. Ela carrega as cores e os símbolos oficiais da nossa trajetória na educação técnica e profissionalizante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div> 
+        <button class="carousel-btn next-btn" id="next-slide">❯</button>
+    </div> 
+    
+    <div class="carousel-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+    </div>
+</section>
     </main>
 
-    <section id="perfil-membro" class="secao-perfil hidden">
-        <button class="btn-back" onclick="fecharPerfil">← Voltar</button>
-
-        <div class="cabecalho-perfil">
-            <div class="perfil-avatar"></div>
-            <div class="info-perfil">
-                <h1 id="perfil-nome">nome</h1>
-                <h3 id="perfil-cargo">cargo</h3>
+    <div id="pagina-perfil" class="hidden">
+        <div class="profile-nav">
+            <button id="btn-voltar" class="btn-back">← Voltar</button>
+            <div class="profile-nav-breadcrumbs">
+                Equipe Safira / <span id="bread-nome">Membro</span>
             </div>
         </div>
 
-        <div class="corpo-perfil">
-            <h2>Sobre mim</h2>
-            <p id="perfil-descricao">descrição</p>
-            
-            <div class="scroll-filler">
-                <p>role para baixo para ver a mudança de tonalidade</p>
+        <div class="profile-container">
+            <div class="profile-card">
+                <div class="profile-card-header">
+                    <div class="profile-avatar-wrapper">
+                        <img id="perf-foto" src="" alt="Foto do Membro">
+                    </div>
+                    <div class="profile-header-meta">
+                        <h2 id="perf-nome">Nome do Membro</h2>
+                        <span id="perf-cargo" class="badge-role">Cargo</span>
+                    </div>
+                </div>
+                
+                <div class="profile-card-body">
+                    <blockquote class="profile-quote">
+                        <p id="perf-frase">"O conhecimento é a única riqueza que cresce quando compartilhada."</p>
+                    </blockquote>
+                    
+                    <div class="profile-section-block">
+                        <h3>Sobre</h3>
+                        <p id="perf-sobre">Descrição detalhada das responsabilidades e da paixão do integrante no projeto técnico.</p>
+                    </div>
+
+                    <div class="profile-section-block">
+                        <h3>Habilidades</h3>
+                        <div id="perf-habilidades" class="tags-container">
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-footer-actions">
+                <button id="btn-voltar-fim" class="btn-back-large">← Voltar para a equipe</button>
             </div>
         </div>
-    </section>
-    
-    <footer class="footer">
-        <p>&copy; 2026 - Equipe Safira || Mostra de Cursos Técnicos</p>
-    </footer>
+    </div>
+
+     <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h3>Equipe Safira</h3>
+                    <p>Unidos pelo conhecimento e pela amizade.</p>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 Equipe Safira. Todos os direitos reservados.</p>
+                    <span>Desenvolvido com dedicação pela equipe.</span>
+                </div>
+            </div>
+        </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

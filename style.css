@@ -1,184 +1,664 @@
+:root{
+    --bg-dark: #171C67;
+    --blue-medium: #3D6E99;
+    --blue-bright: #008AFF;
+    --peach: #FFCAB4;
+    --blue-light: #CBE2FE;
+    --white: #FFFFFF;
+    --text-muted: #E0E6ED;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
 }
 
 body{
-    background-color: #CBE2FE;
-    color: #008AFF;
+    background-color: var(--blue-light);
+    color: var(--bg-dark);
+    font-family: 'Inter', sans-serif;
 }
 
-.nav-header {
-    background-color: #171c67;
-    width: 100%;
-    padding: 35px 25px;
-    display: flex;
-    align-items: center;
+.hidden{
+    display: none !important;
 }
 
-.conteudo-banner{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.subtitulo{
-    color: #008AFF;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
-}
-
-.titulo{
-    color: #008AFF;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 1.1;
-}
-
-.secao-sobre, .secao-escola {
-    padding: 50px 20px 20px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.secao-sobre h2, .secao-escola h2{
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: #141c64;
-}
-
-.secao-sobre p, .secao-escola p{
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.secao-membros{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.lista-membros{
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    max-width: 320px;
-}
-
-.btn-membro{
-    background-color: #3d6e99;
-    color: #000;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-    text-align: left;
-}
-
-.btn-membro:hover{
-    transform: scale(1.03);
-    background-color: #3d6e99;
-}
-
-.btn-membro .dot{
-    width: 14px;
-    height: 14px;
-    background-color: #000;
-    border-radius: 50%;
-    display: inline-block;
-    flex-shrink: 0;
-}
-
-.secao-perfil{
+.navbar{
+    background-color: var(--bg-dark);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    z-index: 2000;
-    background: linear-gradient(to bottom, #141c64 0%, #141c64 25%, #f7c8ac 25%, #f7c8ac 100%);
-    transition: background 0.1s ease;
-    padding: 40px 20px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.hidden {
-    display: none !important;
+.nav-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.brand-logo{
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--blue-bright);
+    text-decoration: none;
+}
+
+.nav-links a{
+    color: var(--blue-bright);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-left: 10px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.nav-links a:hover{
+    background-color: rgba(0, 138, 255, 0.15);
+    color: var(--blue-light);
+}
+
+.hero-section{
+    background-color: var(--blue-light);
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px 20px;
+}
+
+.hero-section h1{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--bg-dark);
+    margin-bottom: 20px;
+}
+
+.hero-section h1 span{
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--blue-bright);
+}
+
+.hero-section p{
+    font-size: 1.3rem;
+    max-width: 650px;
+    line-height: 1.6;
+    color: #4A5568;
+    margin-bottom: 35px;
+}
+
+.btn-primary{
+    background-color: var(--bg-dark);
+    color: var(--blue-bright);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(23, 28, 103, 0.3);
+    transition: transform 0.2 ease, background-color 0.2 ease;
+}
+
+.btn-primary:hover{
+    transform: translateY(-2px);
+    background-color: #1E2587;
+}
+
+.section-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.bg-light-section{
+    max-width: 100%;
+    background-color: #E6F0FA;
+}
+
+.section-title{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--bg-dark);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.section-subtitle{
+    text-align: center;
+    font-size: 1.1rem;
+    color: #556275;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+/* --- QUEM SOMOS ---*/
+.cards-institucionais{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-inst{
+    background-color: var(--blue-medium);
+    color: var(--white);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 138, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-inst:hover {
+    transform: translateY(-6px); 
+    box-shadow: 0 12px 20px rgba(23, 28, 103, 0.2); 
+}
+
+.card-icon{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card-inst h3{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.4rem;
+    color: var(--blue-light);
+    margin-bottom: 15px;
+}
+
+.card-inst p{
+    line-height: 1.6;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+/* --- GRID DE MEMBROS --- */
+.grid-membros{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-membro{
+    background-color: var(--blue-medium);
+    border-radius: 16px;
+    padding: 35px 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.card-membro:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(23, 28, 103, 0.15);
+}
+
+.avatar-wrapper{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px auto;
+    border-radius: 50%;
+    border: 4px solid var(--blue-bright);
+    overflow: hidden;
+    background-color: var(--bg-dark);
+}
+
+.avatar-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-name-tag{
+    background-color: var(--bg-dark);
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--blue-bright);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.member-role{
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.view-profile-text{
+    color: var(--blue-bright);
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.card-membro:hover .view-profile-text{
+    opacity: 1;
+}
+
+/* --- NOSSO COLÉGIO ---*/
+
+/* 1. CONTAINER DO CARROSSEL (Alinha setas e conteúdo) */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px; 
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* 2. ENVELOPE DOS SLIDES */
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Esconde os slides por padrão */
+.carousel-slide {
+    display: none; 
+    width: 100%;
+    animation: fadeEffect 0.5s ease;
+}
+
+/* Mostra apenas o slide que tiver a classe .active */
+.carousel-slide.active {
+    display: block; 
+}
+
+/* 3. DESIGN ORIGINAL DO CARD (ORGANIZADO) */
+.colegio-wrapper {
+    background-color: var(--blue-medium);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.colegio-banner {
+    position: relative;
+    height: 350px; /* Garante tamanho idêntico para todos os banners */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Aplica o filtro escuro APENAS na foto da fachada do colégio */
+.colegio-banner img.img-instituicao {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4) saturate(0.8);
+}
+
+/* Tratamento especial da LOGO: sem filtros, centralizada e sem cortes agressivos */
+.colegio-banner img.img-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Impede o corte da imagem circular */
+    filter: none; /* Totalmente limpa e nítida */
+    padding: 20px; /* Respiro para não colar nas bordas do card */
+}
+
+/* Fundo customizado opcional para destacar a logo redonda no banner */
+.banner-logo-bg {
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+/* Garante que o iframe do Google Maps preencha o banner perfeitamente */
+.colegio-banner iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.banner-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--blue-bright);
+    font-family: 'IBM Plex Mono', monospace;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    white-space: nowrap; 
+}
+
+.colegio-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 40px;
+    gap: 40px;
+    color: var(--white);
+    flex-grow: 1; /* Faz as caixas de texto preencherem alturas proporcionais */
+}
+
+.colegio-content-grid h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--blue-bright);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.colegio-about p {
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-muted);
+}
+
+.colegio-highlights ul {
+    list-style: none;
+}
+
+.colegio-highlights li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-muted);
+}
+
+.colegio-highlights li::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: var(--blue-bright);
+    font-size: 0.8rem;
+    top: 2px;
+}
+
+/* 4. SETAS DE NAVEGAÇÃO */
+.carousel-btn {
+    background: var(--bg-dark);
+    color: var(--blue-bright);
+    border: 2px solid var(--blue-bright);
+    font-size: 24px;
+    padding: 12px 17px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: var(--blue-bright);
+    color: var(--bg-dark);
+    transform: scale(1.1);
+}
+
+/* 5. OS TRÊS PONTINHOS INDICADORES */
+.carousel-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* O pontinho da página atual acende com o azul brilhante do tema */
+.dot.active {
+    background-color: var(--blue-bright); 
+    transform: scale(1.3);
+    box-shadow: 0 0 8px var(--blue-bright);
+}
+
+/* 6. ANIMAÇÃO DE TRANSIÇÃO SUAVE */
+@keyframes fadeEffect {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---  FOOTER ---*/
+.main-footer{
+    background-color: var(--bg-dark);
+    color: var(--white);
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-brand h3{
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--blue-bright);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.footer-brand p{
+    color: var(--blue-light);
+    font-size: 0.95rem;
+}
+
+.footer-copy{
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--blue-light);
+}
+
+.footer-copy span{
+    font-size: 0.85rem;
+    color: rgba(203, 226, 254, 0.6);
+}
+
+/* --- TELA INDIVIDUAL DE PERFIL (MÓDULO SPA) --- */
+#pagina-perfil{
+    background-color: var(--peach);
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.profile-nav{
+    background-color: var(--bg-dark);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .btn-back{
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    background-color: rgba(0, 138, 255, 0.1);
+    border: 1px solid var(--blue-bright);
+    color: var(--blue-bright);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.cabecalho-perfil{
+.btn-back:hover{
+    background-color: var(--blue-bright);
+    color: var(--white);
+}
+
+.profile-nav-breadcrumbs span{
+    color: var(--blue-light);
+}
+
+.profile-container{
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Cartão de perfil */
+.profile-card{
+    background-color: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Cabeçalho do cartão*/
+.profile-card-header{
+    background-color: var(--bg-dark);
+    padding: 40px;
     display: flex;
     align-items: center;
-    gap: 25px;
-    max-width: 600px;
-    margin: 30px auto 15px auto;
+    gap: 35px;
 }
 
-.perfil-avatar{
-    width: 120px;
-    height: 120px;
-    background-color: #3b79c9;
+.profile-avatar-wrapper{
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
+    border: 4px solid var(--blue-bright);
+    overflow: hidden;
+    background-color: #242B9E;
     flex-shrink: 0;
 }
 
-.info-perfil #perfil-cargo{
-    color: #3b79c9;
-    font-size: 20px;
-    font-weight: 500;
+.profile-avatar-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.corpo-perfil{
-    max-width: 600px;
-    margin: 35px auto;
-    color: #141c64;
+.profile-header-meta h2{
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--blue-bright);
+    font-size: 2.2rem;
+    margin-bottom: 8px;
 }
 
-.corpo-perfil h2{
+.badge-role{
+    background-color: rgba(61, 110, 153, 0.4);
+    color: var(--blue-light);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--blue-medium);
+}
+
+/* Corpo do cartão*/
+.profile-card-body{
+    padding: 40px;
+}
+
+.profile-quote{
+    border-left: 4px solid var(--blue-bright);
+    padding-left: 20px;
+    margin-bottom: 35px;
+    font-style: italic;
+    color: #4A5568;
+    font-size: 1.1rem;
+}
+
+.profile-section-block{
+    margin-bottom: 30px;
+}
+
+.profile-section-block h3{
+    font-family: 'Inter', sans-serif;
+    color: var(--bg-dark);
+    font-size: 1.25rem;
+    font-weight: 700;
     margin-bottom: 12px;
 }
 
-.scroll-filler{
-    margin-top: 80px;
-    height: 600px;
-    border-top: 1px dashed rgba(0, 0, 0, 0.1);
-    padding-top: 20px;
+.profile-section-block p{
+    color: #556275;
+    line-height: 1.6;
+    font-size: 1.05rem;
 }
 
-.footer{
-    background-color: #141c64;
-    color: #d6e4ff;
-    text-align: center;
-    padding: 25px;
-    margin-top: 60px;
-    font-size: 14px;
+/* Tags de habilidades*/
+.tags-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag-skill{
+    background-color: var(--blue-light);
+    color: var(--bg-dark);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/*Ações do footer*/
+.profile-footer-actions{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn-back-large{
+    background-color: var(--bg-dark);
+    color: var(--white);
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 138, 255, 0.15);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-back-large:hover{
+    background-color: #1a2075;
+    transform: translateY(-2px);
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .profile-card-header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-section h1 { font-size: 2.8rem; }
+    .colegio-content-grid { grid-template-columns: 1fr; }
+    .footer-container { flex-direction: column; text-align: center; }
+    .footer-copy { text-align: center;}
 }
