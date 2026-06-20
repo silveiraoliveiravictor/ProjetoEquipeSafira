@@ -21,7 +21,7 @@ const dadosMembros = {
         nome: "Isabelle Schimiloski Sutil",
         cargo: "Desenvolvedora Frontend",
         frase: "Às vezes, o silêncio diz mais do que qualquer palavra.",
-        sobre: "Como dev frontend, dá vida ao projeto e o retira do papel",
+        sobre: "Como dev frontend, dá vida ao projeto e retira as ideias do papel. Cuida da interface dos projetos, garantindo que o usuário tenha uma experiência intuitiva e funcional.",
         foto: "img/isabelle.jpg",
         habilidades: ["Design", "Organização", "Determinação", "HTML5"]
     },
