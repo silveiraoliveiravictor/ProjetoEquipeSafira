@@ -419,7 +419,7 @@ body{
     height: 12px;
     width: 12px;
     margin: 0 6px;
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: rgba(26, 21, 188, 0.578); 
     border-radius: 50%;
     display: inline-block;
     transition: all 0.3s ease;
@@ -478,6 +478,7 @@ body{
     font-size: 0.85rem;
     color: rgba(203, 226, 254, 0.6);
 }
+/* PAROU AQUI Ó */
 
 /* --- TELA INDIVIDUAL DE PERFIL (MÓDULO SPA) --- */
 #pagina-perfil{
