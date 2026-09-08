@@ -306,7 +306,7 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.4) saturate(0.8);
+    filter: brightness(0.8) saturate(0.8);
 }
 
 /* Tratamento especial da LOGO: sem filtros, centralizada e sem cortes agressivos */
@@ -354,7 +354,7 @@ body{
 
 .colegio-content-grid h4 {
     font-family: 'IBM Plex Mono', monospace;
-    color: var(--blue-bright);
+    color: var(--bg-dark);
     font-size: 1.3rem;
     margin-bottom: 15px;
 }
