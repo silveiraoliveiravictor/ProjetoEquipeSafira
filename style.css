@@ -241,7 +241,7 @@ body{
 }
 
 .view-profile-text{
-    color: var(--blue-bright);
+    color: var(--bg-dark);
     font-size: 0.9rem;
     font-weight: 600;
     opacity: 0;
@@ -285,7 +285,7 @@ body{
 
 /* 3. DESIGN ORIGINAL DO CARD (ORGANIZADO) */
 .colegio-wrapper {
-    background-color: var(--blue-medium);
+    background-color: var(--bg-dark);
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
@@ -320,7 +320,7 @@ body{
 
 /* Fundo customizado opcional para destacar a logo redonda no banner */
 .banner-logo-bg {
-    background-color: #bdbec2; 
+    background-color: var(--blue-light); 
 }
 
 /* Garante que o iframe do Google Maps preencha o banner perfeitamente */
@@ -354,7 +354,7 @@ body{
 
 .colegio-content-grid h4 {
     font-family: 'IBM Plex Mono', monospace;
-    color: var(--bg-dark);
+    color: var(--blue-bright);
     font-size: 1.3rem;
     margin-bottom: 15px;
 }
@@ -638,6 +638,7 @@ body{
     background-color: var(--bg-dark);
     color: var(--white);
     border: none;
+    margin-bottom: 2.0rem;
     padding: 14px 32px;
     border-radius: 30px;
     font-size: 1rem;
